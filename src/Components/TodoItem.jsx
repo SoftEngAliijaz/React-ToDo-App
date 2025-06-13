@@ -6,7 +6,7 @@ const TodoItem = ({ todo, toggleComplete, startEdit, deleteTodo }) => {
       <li
         className={`flex items-center justify-between p-3 border rounded-md ${
           todo.completed
-            ? "bg-gray-50 border-gray-200"
+            ? "bg-red-50 border-red-500"
             : "bg-white border-gray-300"
         }`}
       >
@@ -19,7 +19,7 @@ const TodoItem = ({ todo, toggleComplete, startEdit, deleteTodo }) => {
           />
           <span
             className={`ml-3 ${
-              todo.completed ? "line-through text-gray-400" : "text-gray-700"
+              todo.completed ? "line-through text-red-400" : "text-gray-700"
             }`}
           >
             {todo.text}
@@ -33,7 +33,14 @@ const TodoItem = ({ todo, toggleComplete, startEdit, deleteTodo }) => {
             Edit
           </button>
           <button
-            onClick={() => deleteTodo(todo.id)}
+            onClick={() => {
+              if (confirm("Are you sure you want to delete this?")) {
+                deleteTodo(todo.id);
+                alert("Deletion process is successfull");
+              } else {
+                alert("Deletion process is cancelled");
+              }
+            }}
             className="text-sm text-red-500 hover:text-red-700"
           >
             Delete

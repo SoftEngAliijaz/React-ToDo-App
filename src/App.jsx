@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import useLocalStorage from "./Hooks/useLocalStorage";
-import TodoForm from "./components/TodoForm";
-import TodoItem from "./components/TodoItem";
-import TodoStats from "./components/TodoStats";
+import { TodoForm, TodoItem, TodoStats } from "./Components";
 
 export default function App() {
   const [todos, setTodos] = useLocalStorage("todos", []);

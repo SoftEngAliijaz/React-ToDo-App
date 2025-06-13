@@ -10,7 +10,7 @@ const TodoItem = ({ todo, toggleComplete, startEdit, deleteTodo }) => {
             : "bg-white border-gray-300"
         }`}
       >
-        <div className="flex items-center">
+        <div className="flex   items-center">
           <input
             type="checkbox"
             checked={todo.completed}
@@ -28,7 +28,7 @@ const TodoItem = ({ todo, toggleComplete, startEdit, deleteTodo }) => {
         <div className="space-x-2">
           <button
             onClick={() => startEdit(todo.id)}
-            className="text-sm text-blue-500 hover:text-blue-700"
+            className="text-sm  text-blue-500 hover:text-blue-700"
           >
             Edit
           </button>

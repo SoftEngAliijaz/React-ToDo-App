@@ -51,7 +51,7 @@ export default function App() {
   return (
     <>
       <div className="min-h-screen bg-gray-100 py-8">
-        <div className="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden p-6">
+        <div className="max-w-[800px] mx-auto bg-white rounded-lg shadow-md overflow-hidden p-6">
           <h1 className="text-2xl font-bold text-gray-800 mb-6">TODO App</h1>
 
           <TodoForm

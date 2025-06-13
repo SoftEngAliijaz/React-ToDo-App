@@ -10,12 +10,12 @@ const TodoItem = ({ todo, toggleComplete, startEdit, deleteTodo }) => {
             : "bg-white border-gray-300"
         }`}
       >
-        <div className="flex   items-center">
+        <div className="flex items-center">
           <input
             type="checkbox"
             checked={todo.completed}
             onChange={() => toggleComplete(todo.id)}
-            className="h-5 w-5 text-blue-500 rounded focus:ring-blue-400"
+            className="text-blue-500 rounded focus:ring-blue-400"
           />
           <span
             className={`ml-3 ${

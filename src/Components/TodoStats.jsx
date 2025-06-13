@@ -1,7 +1,14 @@
 import React from "react";
 
-export default function TodoStats() {
+const TodoStats = ({ todos }) => {
+  const completedCount = todos.filter((todo) => todo.completed).length;
   return (
-    <div className="mt-4 text-sm text-gray-500">1 of 3 tasks completed</div>
+    <>
+      <div className="mt-4 text-sm text-gray-500">
+        {completedCount} of {todos.length} tasks completed
+      </div>
+    </>
   );
-}
+};
+
+export default TodoStats;
